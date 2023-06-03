@@ -1,0 +1,92 @@
+{
+    "networksList": [
+        {
+            "networkName": "192.168.0.0/24",
+            "isRootNetwork": false
+        },
+        {
+            "networkName": "10.0.0.0/24",
+            "isRootNetwork": false
+        },        
+        {
+            "networkName": "0.0.0.0/0",
+            "isRootNetwork": true
+        }
+    ],
+    "hostsList": [
+        {
+            "hostName": "Router1",
+            "routesTraffic": true,
+            "networkAdapters": [
+                {
+                    "adapterName": "eth0",
+                    "adapterIP": "90.0.0.1"
+                },
+                {
+                    "adapterName": "eth1",
+                    "adapterIP": "10.0.0.1"
+                }
+            ],
+            "networkServices": [
+                {
+                    "layer4protocol": "TCP",
+                    "portNumber": 80,
+                    "layer7protocol": "HTTP",
+                    "processName": "nginx.exe"
+                }
+            ]
+        },
+        {
+            "hostName": "Router2",
+            "routesTraffic": true,
+            "networkAdapters": [
+                {
+                    "adapterName": "eth0",
+                    "adapterIP": "192.168.0.1"
+                },
+                {
+                    "adapterName": "eth1",
+                    "adapterIP": "10.0.0.2"
+                }
+            ],
+            "networkServices": [
+                {
+                    "layer4protocol": "TCP",
+                    "portNumber": 80,
+                    "layer7protocol": "HTTP",
+                    "processName": "nginx.exe"
+                },
+                {
+                    "layer4protocol": "TCP",
+                    "portNumber": 443,
+                    "layer7protocol": "HTTPS",
+                    "processName": "nginx.exe"
+                }
+            ]
+        },
+        {
+            "hostName": "PC1",
+            "routesTraffic": false,
+            "networkAdapters": [
+                {
+                    "adapterName": "eth0",
+                    "adapterIP": "192.168.0.2"
+                }
+            ],
+            "networkServices": [
+                {
+                    "layer4protocol": "TCP",
+                    "portNumber": 80,
+                    "layer7protocol": "HTTP",
+                    "processName": "nginx.exe"
+                },
+                {
+                    "layer4protocol": "TCP",
+                    "portNumber": 443,
+                    "layer7protocol": "HTTPS",
+                    "processName": "nginx.exe"
+                }
+            ]
+        }
+    ]
+}
