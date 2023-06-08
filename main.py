@@ -34,7 +34,7 @@ connectionTemplate = '<mxCell id="ConnectionID" edge="1" parent="1" source="Conn
 
 outputXML = headerOpen
 
-f = open('data.json')
+f = open('data2.json')
 data = json.load(f)
 networksList = data['networksList']
 hostsList = data['hostsList']
