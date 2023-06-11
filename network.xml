@@ -1,1 +1,195 @@
-<mxfile><diagram name="NetworkDiagram" id="NetworkDiagram"><mxGraphModel><root><mxCell id="0" /><mxCell id="1" parent="0" /><mxCell id="192_168_0_0_24" value="192.168.0.0/24" style="verticalLabelPosition=bottom;html=1;shape=mxgraph.cisco19.rect;prIcon=l2_switch;" vertex="1" parent="1"><mxGeometry width="50" height="50" as="geometry" /></mxCell><mxCell id="10_0_0_0_24" value="10.0.0.0/24" style="verticalLabelPosition=bottom;html=1;shape=mxgraph.cisco19.rect;prIcon=l2_switch;" vertex="1" parent="1"><mxGeometry width="50" height="50" as="geometry" /></mxCell><mxCell id="0_0_0_0_0" value="0.0.0.0/0" style="verticalLabelPosition=bottom;html=1;shape=mxgraph.cisco19.rect;prIcon=l2_switch;" vertex="1" parent="1"><mxGeometry width="50" height="50" as="geometry" /></mxCell><mxCell id="host_0000" value="Router1" style="verticalLabelPosition=bottom;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.router;" vertex="1" parent="1"><mxGeometry width="60" height="60" as="geometry" /></mxCell><mxCell id="host_0000_eth0" value="eth0&lt;br&gt;90.0.0.1" style="html=1;strokeColor=none;fillColor=#000000;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.vvd.ethernet_port;" vertex="1" parent="1"><mxGeometry width="50" height="50" as="geometry" /></mxCell><mxCell id="host_0000_eth1" value="eth1&lt;br&gt;10.0.0.1" style="html=1;strokeColor=none;fillColor=#000000;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.vvd.ethernet_port;" vertex="1" parent="1"><mxGeometry width="50" height="50" as="geometry" /></mxCell><mxCell id="host_0000_service_000" value="nginx.exe&lt;br&gt;HTTP&lt;br&gt;TCP 80" style="html=1;fillColor=#0079D6;verticalAlign=bottom;spacingTop=-6;fontColor=#FFFFFF;shape=mxgraph.sitemap.services;direction=west;" vertex="1" parent="1"><mxGeometry width="120" height="70" as="geometry" /></mxCell><mxCell id="host_0000_service_000_service_connection" edge="1" parent="1" source="host_0000_service_000" target="host_0000"><mxGeometry as="geometry" /></mxCell><mxCell id="host_0001" value="Router2" style="verticalLabelPosition=bottom;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.router;" vertex="1" parent="1"><mxGeometry width="60" height="60" as="geometry" /></mxCell><mxCell id="host_0001_eth0" value="eth0&lt;br&gt;192.168.0.1" style="html=1;strokeColor=none;fillColor=#000000;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.vvd.ethernet_port;" vertex="1" parent="1"><mxGeometry width="50" height="50" as="geometry" /></mxCell><mxCell id="host_0001_eth1" value="eth1&lt;br&gt;10.0.0.2" style="html=1;strokeColor=none;fillColor=#000000;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.vvd.ethernet_port;" vertex="1" parent="1"><mxGeometry width="50" height="50" as="geometry" /></mxCell><mxCell id="host_0001_service_000" value="nginx.exe&lt;br&gt;HTTP&lt;br&gt;TCP 80" style="html=1;fillColor=#0079D6;verticalAlign=bottom;spacingTop=-6;fontColor=#FFFFFF;shape=mxgraph.sitemap.services;direction=west;" vertex="1" parent="1"><mxGeometry width="120" height="70" as="geometry" /></mxCell><mxCell id="host_0001_service_000_service_connection" edge="1" parent="1" source="host_0001_service_000" target="host_0001"><mxGeometry as="geometry" /></mxCell><mxCell id="host_0001_service_001" value="nginx.exe&lt;br&gt;HTTPS&lt;br&gt;TCP 443" style="html=1;fillColor=#0079D6;verticalAlign=bottom;spacingTop=-6;fontColor=#FFFFFF;shape=mxgraph.sitemap.services;direction=west;" vertex="1" parent="1"><mxGeometry width="120" height="70" as="geometry" /></mxCell><mxCell id="host_0001_service_001_service_connection" edge="1" parent="1" source="host_0001_service_001" target="host_0001"><mxGeometry as="geometry" /></mxCell><mxCell id="host_0002" value="PC1" style="html=1;fillColor=#0079D6;verticalLabelPosition=bottom;shape=mxgraph.office.devices.workstation;" vertex="1" parent="1"><mxGeometry width="53" height="56" as="geometry" /></mxCell><mxCell id="host_0002_eth0" value="eth0&lt;br&gt;192.168.0.2" style="html=1;strokeColor=none;fillColor=#000000;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.vvd.ethernet_port;" vertex="1" parent="1"><mxGeometry width="50" height="50" as="geometry" /></mxCell><mxCell id="host_0002_service_000" value="nginx.exe&lt;br&gt;HTTP&lt;br&gt;TCP 80" style="html=1;fillColor=#0079D6;verticalAlign=bottom;spacingTop=-6;fontColor=#FFFFFF;shape=mxgraph.sitemap.services;direction=west;" vertex="1" parent="1"><mxGeometry width="120" height="70" as="geometry" /></mxCell><mxCell id="host_0002_service_000_service_connection" edge="1" parent="1" source="host_0002_service_000" target="host_0002"><mxGeometry as="geometry" /></mxCell><mxCell id="host_0002_service_001" value="nginx.exe&lt;br&gt;HTTPS&lt;br&gt;TCP 443" style="html=1;fillColor=#0079D6;verticalAlign=bottom;spacingTop=-6;fontColor=#FFFFFF;shape=mxgraph.sitemap.services;direction=west;" vertex="1" parent="1"><mxGeometry width="120" height="70" as="geometry" /></mxCell><mxCell id="host_0002_service_001_service_connection" edge="1" parent="1" source="host_0002_service_001" target="host_0002"><mxGeometry as="geometry" /></mxCell><mxCell id="host_0000_eth0_switch_connection" edge="1" parent="1" source="host_0000_eth0" target="0_0_0_0_0"><mxGeometry as="geometry" /></mxCell><mxCell id="host_0000_eth0_host_connection" edge="1" parent="1" source="host_0000" target="host_0000_eth0"><mxGeometry as="geometry" /></mxCell><mxCell id="host_0000_eth1_host_connection" edge="1" parent="1" source="host_0000_eth1" target="host_0000"><mxGeometry as="geometry" /></mxCell><mxCell id="host_0000_eth1_switch_connection" edge="1" parent="1" source="10_0_0_0_24" target="host_0000_eth1"><mxGeometry as="geometry" /></mxCell><mxCell id="host_0001_eth1_switch_connection" edge="1" parent="1" source="host_0001_eth1" target="10_0_0_0_24"><mxGeometry as="geometry" /></mxCell><mxCell id="host_0001_eth1_host_connection" edge="1" parent="1" source="host_0001" target="host_0001_eth1"><mxGeometry as="geometry" /></mxCell><mxCell id="host_0001_eth0_host_connection" edge="1" parent="1" source="host_0001_eth0" target="host_0001"><mxGeometry as="geometry" /></mxCell><mxCell id="host_0001_eth0_switch_connection" edge="1" parent="1" source="192_168_0_0_24" target="host_0001_eth0"><mxGeometry as="geometry" /></mxCell><mxCell id="host_0002_eth0_switch_connection" edge="1" parent="1" source="host_0002_eth0" target="192_168_0_0_24"><mxGeometry as="geometry" /></mxCell><mxCell id="host_0002_eth0_host_connection" edge="1" parent="1" source="host_0002" target="host_0002_eth0"><mxGeometry as="geometry" /></mxCell></root></mxGraphModel></diagram></mxfile>
+<mxfile>
+    <diagram name="NetworkDiagram" id="NetworkDiagram">
+        <mxGraphModel>
+            <root>
+                <mxCell id="0" />
+                <mxCell id="1" parent="0" />
+                <mxCell id="10_0_0_0_24" value="10.0.0.0/24"
+                    style="verticalLabelPosition=bottom;html=1;shape=mxgraph.cisco19.rect;prIcon=l2_switch;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="50" height="50" as="geometry" />
+                </mxCell>
+                <mxCell id="192_168_1_0_24" value="192.168.1.0/24"
+                    style="verticalLabelPosition=bottom;html=1;shape=mxgraph.cisco19.rect;prIcon=l2_switch;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="50" height="50" as="geometry" />
+                </mxCell>
+                <mxCell id="0_0_0_0_0" value="0.0.0.0/0"
+                    style="verticalLabelPosition=bottom;html=1;shape=mxgraph.cisco19.rect;prIcon=l2_switch;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="50" height="50" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000" value="OPNsense.localdomain"
+                    style="verticalLabelPosition=bottom;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.router;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="60" height="60" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000_192.168.1.1" value="192.168.1.1&lt;br&gt;192.168.1.1"
+                    style="html=1;strokeColor=none;fillColor=#000000;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.vvd.ethernet_port;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="50" height="50" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000_10.0.0.1" value="10.0.0.1&lt;br&gt;10.0.0.1"
+                    style="html=1;strokeColor=none;fillColor=#000000;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.vvd.ethernet_port;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="50" height="50" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000_90.0.0.1" value="90.0.0.1&lt;br&gt;90.0.0.1"
+                    style="html=1;strokeColor=none;fillColor=#000000;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.vvd.ethernet_port;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="50" height="50" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000_service_000" value="&lt;br&gt;&lt;br&gt;tcp 445"
+                    style="html=1;fillColor=#0079D6;verticalAlign=bottom;spacingTop=-6;fontColor=#FFFFFF;shape=mxgraph.sitemap.services;direction=west;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="120" height="70" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000_service_000_service_connection" edge="1" parent="1"
+                    source="host_0000_service_000" target="host_0000">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000_service_001" value="&lt;br&gt;&lt;br&gt;tcp 135"
+                    style="html=1;fillColor=#0079D6;verticalAlign=bottom;spacingTop=-6;fontColor=#FFFFFF;shape=mxgraph.sitemap.services;direction=west;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="120" height="70" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000_service_001_service_connection" edge="1" parent="1"
+                    source="host_0000_service_001" target="host_0000">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000_service_002" value="&lt;br&gt;&lt;br&gt;tcp 139"
+                    style="html=1;fillColor=#0079D6;verticalAlign=bottom;spacingTop=-6;fontColor=#FFFFFF;shape=mxgraph.sitemap.services;direction=west;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="120" height="70" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000_service_002_service_connection" edge="1" parent="1"
+                    source="host_0000_service_002" target="host_0000">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0001" value="192.168.1.100"
+                    style="html=1;fillColor=#0079D6;verticalLabelPosition=bottom;shape=mxgraph.office.devices.workstation;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="53" height="56" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0001_192.168.1.100" value="192.168.1.100&lt;br&gt;192.168.1.100"
+                    style="html=1;strokeColor=none;fillColor=#000000;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.vvd.ethernet_port;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="50" height="50" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0002" value="10.0.0.2"
+                    style="html=1;fillColor=#0079D6;verticalLabelPosition=bottom;shape=mxgraph.office.devices.workstation;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="53" height="56" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0002_10.0.0.2" value="10.0.0.2&lt;br&gt;10.0.0.2"
+                    style="html=1;strokeColor=none;fillColor=#000000;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.vvd.ethernet_port;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="50" height="50" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0002_service_000" value="&lt;br&gt;&lt;br&gt;tcp 22"
+                    style="html=1;fillColor=#0079D6;verticalAlign=bottom;spacingTop=-6;fontColor=#FFFFFF;shape=mxgraph.sitemap.services;direction=west;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="120" height="70" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0002_service_000_service_connection" edge="1" parent="1"
+                    source="host_0002_service_000" target="host_0002">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0003" value="192.168.1.101"
+                    style="html=1;fillColor=#0079D6;verticalLabelPosition=bottom;shape=mxgraph.office.devices.workstation;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="53" height="56" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0003_192.168.1.101" value="192.168.1.101&lt;br&gt;192.168.1.101"
+                    style="html=1;strokeColor=none;fillColor=#000000;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.vvd.ethernet_port;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="50" height="50" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0004" value="10.0.0.4"
+                    style="html=1;fillColor=#0079D6;verticalLabelPosition=bottom;shape=mxgraph.office.devices.workstation;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="53" height="56" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0004_10.0.0.4" value="10.0.0.4&lt;br&gt;10.0.0.4"
+                    style="html=1;strokeColor=none;fillColor=#000000;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.vvd.ethernet_port;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="50" height="50" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0005" value="90.0.0.2"
+                    style="html=1;fillColor=#0079D6;verticalLabelPosition=bottom;shape=mxgraph.office.devices.workstation;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="53" height="56" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0005_90.0.0.2" value="90.0.0.2&lt;br&gt;90.0.0.2"
+                    style="html=1;strokeColor=none;fillColor=#000000;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.vvd.ethernet_port;"
+                    vertex="1" parent="1">
+                    <mxGeometry width="50" height="50" as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000_90.0.0.1_switch_connection" edge="1" parent="1"
+                    source="host_0000_90.0.0.1" target="0_0_0_0_0">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000_90.0.0.1_host_connection" edge="1" parent="1"
+                    source="host_0000" target="host_0000_90.0.0.1">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0005_90.0.0.2_switch_connection" edge="1" parent="1"
+                    source="host_0005_90.0.0.2" target="0_0_0_0_0">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0005_90.0.0.2_host_connection" edge="1" parent="1"
+                    source="host_0005" target="host_0005_90.0.0.2">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000_192.168.1.1_host_connection" edge="1" parent="1"
+                    source="host_0000_192.168.1.1" target="host_0000">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000_192.168.1.1_switch_connection" edge="1" parent="1"
+                    source="192_168_1_0_24" target="host_0000_192.168.1.1">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000_10.0.0.1_host_connection" edge="1" parent="1"
+                    source="host_0000_10.0.0.1" target="host_0000">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0000_10.0.0.1_switch_connection" edge="1" parent="1"
+                    source="10_0_0_0_24" target="host_0000_10.0.0.1">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0001_192.168.1.100_switch_connection" edge="1" parent="1"
+                    source="host_0001_192.168.1.100" target="192_168_1_0_24">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0001_192.168.1.100_host_connection" edge="1" parent="1"
+                    source="host_0001" target="host_0001_192.168.1.100">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0003_192.168.1.101_switch_connection" edge="1" parent="1"
+                    source="host_0003_192.168.1.101" target="192_168_1_0_24">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0003_192.168.1.101_host_connection" edge="1" parent="1"
+                    source="host_0003" target="host_0003_192.168.1.101">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0002_10.0.0.2_switch_connection" edge="1" parent="1"
+                    source="host_0002_10.0.0.2" target="10_0_0_0_24">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0002_10.0.0.2_host_connection" edge="1" parent="1"
+                    source="host_0002" target="host_0002_10.0.0.2">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0004_10.0.0.4_switch_connection" edge="1" parent="1"
+                    source="host_0004_10.0.0.4" target="10_0_0_0_24">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+                <mxCell id="host_0004_10.0.0.4_host_connection" edge="1" parent="1"
+                    source="host_0004" target="host_0004_10.0.0.4">
+                    <mxGeometry as="geometry" />
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

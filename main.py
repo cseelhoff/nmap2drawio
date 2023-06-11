@@ -108,7 +108,11 @@ processedHostIDs = set()
 processedNetworkIDs = set()
 lastNetworkCount = -1
 while len(processedAdapterIDs) < len(adaptersNetwork): # alternative is < len(adaptersHost)
-    #lastNetworkCount = len(networkIDSet)
+    lastConnectedNetworksCount = len(connectedNetworks)
+    lastHostCount = len(processedHostIDs)
+    lastProcessedNetworkIDCount = len(processedNetworkIDs)
+    lastAdapterCount = len(processedAdapterIDs)
+
     for networkID in connectedNetworks:
         if networkID in processedNetworkIDs:
             continue
@@ -140,6 +144,20 @@ while len(processedAdapterIDs) < len(adaptersNetwork): # alternative is < len(ad
             connectedNetworks.add(networkID)
             newConnectionXML = connectionTemplate.replace('ConnectionID', adapterID + '_switch_connection').replace('ConnectionSource', networkID).replace('ConnectionTarget', adapterID)
             outputXML += newConnectionXML
+
+    if lastConnectedNetworksCount != len(connectedNetworks):
+        continue
+    if lastHostCount != len(processedHostIDs):
+        continue
+    if lastProcessedNetworkIDCount != len(processedNetworkIDs):
+        continue
+    if lastAdapterCount != len(processedAdapterIDs):
+        continue
+
+    for network in networks:
+        if network['networkID'] not in connectedNetworks:
+            connectedNetworks.add(network['networkID'])
+            break
 
 outputXML += headerClose
 f = open("network.xml", "w")
