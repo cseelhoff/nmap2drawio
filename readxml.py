@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-tree = ET.parse('nmap.xml')
+tree = ET.parse('poa_scope.xml')
 root = tree.getroot()
 
 ipToHosts = {}
