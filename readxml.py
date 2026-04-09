@@ -45,15 +45,15 @@ for child1 in root:
                     ipToHosts[ipaddr] = set()
                 if ipaddr not in ipToPorts:
                     ipToPorts[ipaddr] = set()
-                for child2 in child1:
-                    if child2.tag == 'hostnames':
-                        for hostname in child2.attrib:
+                for child2b in child1:
+                    if child2b.tag == 'hostnames':
+                        for hostname in child2b.attrib:
                             ipToHosts[ipaddr].add(hostname)
                             if hostname not in hostsToIPs:
                                 hostsToIPs[hostname] = set()
                             hostsToIPs[hostname].add(ipaddr)
-                    if child2.tag == 'ports':
-                        for child3 in child2:
+                    if child2b.tag == 'ports':
+                        for child3 in child2b:
                             if child3.tag == 'port':
                                 ipToPorts[ipaddr].add(child3.attrib['protocol'] + ":" + child3.attrib['portid'])
 for ip in ipToHosts:
@@ -86,9 +86,9 @@ for host in hostsToIPs:
         continue
     allHostnames = set()
     for ip in hostsToIPs[host]:
-        for host in ipToHosts[ip]:
-            allHostnames.add(host)
-            hostsCompleted.add(host)
+        for h in ipToHosts[ip]:
+            allHostnames.add(h)
+            hostsCompleted.add(h)
     print('hostName: ' + host)
     print('hostNames: ' + str(allHostnames))
     networkAdapters = []

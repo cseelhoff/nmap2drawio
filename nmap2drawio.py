@@ -51,15 +51,15 @@ def parse_nmap_xml(input_file):
                         ipToHosts[ipaddr] = set()
                     if ipaddr not in ipToPorts:
                         ipToPorts[ipaddr] = set()
-                    for child2 in child1:
-                        if child2.tag == 'hostnames':
-                            for hostname in child2.attrib:
+                    for child2b in child1:
+                        if child2b.tag == 'hostnames':
+                            for hostname in child2b.attrib:
                                 ipToHosts[ipaddr].add(hostname)
                                 if hostname not in hostsToIPs:
                                     hostsToIPs[hostname] = set()
                                 hostsToIPs[hostname].add(ipaddr)
-                        if child2.tag == 'ports':
-                            for child3 in child2:
+                        if child2b.tag == 'ports':
+                            for child3 in child2b:
                                 if child3.tag == 'port':
                                     ipToPorts[ipaddr].add(child3.attrib['protocol'] + ":" + child3.attrib['portid'])
 
@@ -90,9 +90,9 @@ def parse_nmap_xml(input_file):
             continue
         allHostnames = set()
         for ip in hostsToIPs[host]:
-            for host in ipToHosts[ip]:
-                allHostnames.add(host)
-                hostsCompleted.add(host)
+            for h in ipToHosts[ip]:
+                allHostnames.add(h)
+                hostsCompleted.add(h)
         networkAdapters = []
         networkServices = []
         for ip in hostsToIPs[host]:
@@ -144,8 +144,8 @@ def generate_drawio(data, output_file, include_processes=True):
     workstationHeight = 56
     workstationTemplate = '<mxCell id="WorkstationID" value="WorkstationName" style="html=1;fillColor=#0079D6;verticalLabelPosition=bottom;shape=mxgraph.office.devices.workstation;" vertex="1" parent="1"><mxGeometry width="' + str(workstationWidth) + '" height="' + str(workstationHeight) + '" as="geometry" /></mxCell>'
 
-    serviceWidth = 120
-    serviceHeight = 70
+    serviceWidth = 50
+    serviceHeight = 25
     networkServiceTemplate = '<mxCell id="ServiceID" value="ServiceName" style="html=1;fillColor=#0079D6;verticalAlign=bottom;spacingTop=-6;fontColor=#FFFFFF;shape=mxgraph.sitemap.services;direction=west;" vertex="1" parent="1"><mxGeometry width="' + str(serviceWidth) + '" height="' + str(serviceHeight) + '" as="geometry" /></mxCell>'
 
     connectionTemplate = '<mxCell id="ConnectionID" edge="1" parent="1" source="ConnectionSource" target="ConnectionTarget"><mxGeometry as="geometry" /></mxCell>'
@@ -216,6 +216,8 @@ def generate_drawio(data, output_file, include_processes=True):
                 serviceName = networkService['processName'] + '&lt;br&gt;' + networkService['layer7protocol'] + '&lt;br&gt;' + networkService['layer4protocol'] + ' ' + str(networkService['portNumber'])
                 serviceXML = networkServiceTemplate.replace('ServiceID', serviceID).replace('ServiceName', serviceName)
                 outputXML += serviceXML
+                serviceConnectionXML = connectionTemplate.replace('ConnectionID', serviceID + '_host_connection').replace('ConnectionSource', serviceID).replace('ConnectionTarget', hostID)
+                outputXML += serviceConnectionXML
 
     processedAdapterIDs = set()
     processedHostIDs = set()
