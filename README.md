@@ -60,3 +60,31 @@ nmap -T4 -Pn -sU -sV --stats-every 30s \
 | 1st | Fast Discovery | All subnets | ~10-30 min |
 | 2nd | Detailed TCP | All subnets (`-Pn`) | ~4-6 hrs |
 | 2nd (parallel) | UDP | Live hosts only | ~1-2 hrs |
+
+## Generate Draw.io Network Diagram
+
+Convert an nmap XML scan directly into a draw.io network diagram:
+
+```bash
+python nmap2drawio.py -i <input_scan.xml> -o <output_diagram.drawio.xml>
+```
+
+### Options
+
+| Flag | Description |
+|------|-------------|
+| `-i`, `--input` | Input nmap XML scan file (required) |
+| `-o`, `--output` | Output draw.io XML file (required) |
+| `--includeProcesses` | Include services/ports in diagram: `y` or `n` (default: `y`) |
+
+### Examples
+
+```bash
+# Basic conversion
+python nmap2drawio.py -i out_172_scan.xml -o network-diagram.drawio.xml
+
+# Exclude service/port details from the diagram
+python nmap2drawio.py -i out_172_scan.xml -o network-diagram.drawio.xml --includeProcesses n
+```
+
+Open the resulting `.drawio.xml` file in [draw.io](https://app.diagrams.net/) to view and edit the network diagram.
